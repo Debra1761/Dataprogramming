@@ -1,0 +1,67 @@
+#include<stdio.h> 
+#include<string.h> 
+int RegexMatch(char *S1, char* S2, int n1, int n2) 
+{ 
+int ptr1 = 0; int ptr2 = 0; 
+
+
+
+while (ptr1 < n1 && ptr2 < n2) 
+{ 
+
+if (S1[ptr1] == S2[ptr2]) 
+{ 
+ptr1++; ptr2++; 
+if (S2[ptr2] == '.') 
+ptr2++; 
+if (S2[ptr2] == '*') 
+{ ptr2++; 
+while(S1[ptr1-1] == S1[ptr1] && ptr1 < n1) 
+ptr1++; 
+} 
+} 
+else if (S2[ptr2+1] == '*') 
+{ 
+ptr2 = ptr2+2; 
+} 
+else if (S2[ptr2+1] == '.') 
+{ 
+ptr2 = ptr2+2; 
+} 
+else 
+{ 
+return 0; 
+} 
+} 
+if (ptr1 < n1) return 0; 
+if (ptr2 < n2) 
+{ 
+while(ptr2 < n2) 
+{ 
+if (S2[ptr2] == '*' || S2[ptr2] == '.') 
+ptr2++; 
+else 
+{ 
+if (S2[ptr2+1] == '.' || S2[ptr2+1] == '*') 
+ptr2 = ptr2 + 2; 
+else 
+return 0; 
+} 
+} 
+} 
+return 1; 
+}
+int main() 
+{ 
+char S1[100], S2[100];
+printf("enter the 1st string: ");
+scanf("%s",S1);
+printf("enter the 2nd string:");
+scanf("%s",S2);
+int flag=RegexMatch(S1,S2,strlen(S1),strlen(S2)); 
+if(!flag) 
+printf("FALSE\n"); 
+else 
+printf("TRUE\n"); 
+getch(); 
+} 
