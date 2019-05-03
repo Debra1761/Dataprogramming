@@ -27,6 +27,7 @@ void lcs()
                                 c[i][0]=0;
                 for(i=0;i<=n;i++)
                                 c[0][i]=0;
+				                             //c, u and l shows the movement of vrossway, up and down direction in a matrix  respectively
                                 
                 for(i=1;i<=m;i++)
                                 for(j=1;j<=n;j++)
