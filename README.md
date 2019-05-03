@@ -33,6 +33,8 @@ The search starts from the root directory defined in the input parameters.
 * to match one or more characters in a path segment
 
 ** to match any number of path segments, including none
+
+
 Features
 --------
 
