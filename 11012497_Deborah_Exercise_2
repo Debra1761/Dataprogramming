@@ -51,6 +51,20 @@ return 0;
 } 
 return 1; 
 }
+int bool_isSubSequence(char str1[], char str2[], int m, int n) 
+{ 
+   int j = 0;                                                        // For index of str1 (or subsequence 
+  
+                                                                 // Traverse str2 and str1, and compare current character  
+                                                                        // of str2 with first unmatched char of str1, if matched  
+                                                                                   // then move ahead in str1 
+   for (int i=0; i<n&&j<m; i++) 
+       if (str1[j] == str2[i]) 
+         j++; 
+  
+                                                                     // If all characters of str1 were found in str2 
+   return (j==m); 
+} 
 int main() 
 { 
 char S1[100], S2[100];
@@ -60,8 +74,9 @@ printf("enter the 2nd string:");
 scanf("%s",S2);
 int flag=RegexMatch(S1,S2,strlen(S1),strlen(S2)); 
 if(!flag) 
-printf("FALSE\n"); 
+
+printf("FALSE\n");          // If last characters are not matching to str1 
 else 
-printf("TRUE\n"); 
-getch(); 
+printf("TRUE\n");        // If last characters are  matching to str1
+return(0);
 } 
