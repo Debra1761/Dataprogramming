@@ -1,9 +1,20 @@
+
+
 # Dataprogramming
 Project Assignment submission of data programming language in c for the following problems for the longest common subsequence and pattern matching.
 
+Tasks to preform various file system based operations.
 
 
-$project
+Installing
+Documentation
+Pattern matching
+Features
+Installation
+Contribution
+License
+
+$Documentation
 ========
 The programs are used for an assignment submisson when given two problems and the solution written in c prpgramming. The syntax and fucntion used are simple and easy to understand.
 The article contributed GeeksforGeeks.com (https://www.geeksforgeeks.org/longest-common-subsequence-dp-4/) on the program of the first exercise and https://www.geeksforgeeks.org/regex-regular-expression-in-c/ for the second excercise.
@@ -12,7 +23,16 @@ Look how easy it is to use:
     import project
     # Get your stuff done
     project.do_stuff()
+    
+Pattern Matching
+-----------------
+Find, Move and Delete tasks use pattern matching for finding files.
 
+The search starts from the root directory defined in the input parameters.
+
+* to match one or more characters in a path segment
+
+** to match any number of path segments, including none
 Features
 --------
 
@@ -33,8 +53,8 @@ Install $project by running:
   Using an online c compiler if a strong internet connection allows you to do so.https://www.onlinegdb.com/online_c_compiler
 
 
-Contribute
-----------
+Contribution
+------------
 
 - Issue Tracker: https://www.geeksforgeeks.org
 - Source Code: github.com/Debra1761/Dataprogramming
